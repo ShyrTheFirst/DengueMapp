@@ -1,0 +1,91 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0pje4sf5ocog"]
+
+[ext_resource type="Script" path="res://sobre_nos.gd" id="1_caub1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_w1sfv"]
+font_size = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_atn47"]
+bg_color = Color(0, 0.427451, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yepx0"]
+bg_color = Color(0, 0.662745, 0, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="SobreNos" type="CanvasLayer"]
+script = ExtResource("1_caub1")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.203922, 0.964706, 0.301961, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -781.5
+offset_top = -330.0
+offset_right = 781.5
+offset_bottom = 330.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/ScrollContainer"]
+layout_mode = 2
+text = "Grupo do Jesuíno de A----------------------------------------------------------------
+História do projeto
+Como foi planejado
+Qual o objetivo
+Um pouco sobre cada um
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-"
+label_settings = SubResource("LabelSettings_w1sfv")
+horizontal_alignment = 1
+
+[node name="Voltar" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -124.0
+offset_bottom = 63.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.572549, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_atn47")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yepx0")
+text = "Voltar"
+
+[connection signal="pressed" from="Panel/Voltar" to="." method="_on_voltar_pressed"]

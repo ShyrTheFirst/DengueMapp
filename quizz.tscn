@@ -1,0 +1,176 @@
+[gd_scene load_steps=2 format=3 uid="uid://8lifb46bwbu"]
+
+[ext_resource type="Script" path="res://Quizz.gd" id="1_53sqe"]
+
+[node name="Quizz" type="CanvasLayer"]
+script = ExtResource("1_53sqe")
+metadata/_edit_vertical_guides_ = [400.0, 802.0, 1201.0]
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Pergunta" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -792.0
+offset_right = 796.0
+offset_bottom = 247.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 70
+text = "Perguntinha?"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="voltar" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_top = -31.0
+offset_right = 35.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "VOLTAR"
+
+[node name="Opcao1" type="Label" parent="Panel"]
+layout_mode = 2
+offset_top = 301.0
+offset_right = 400.0
+offset_bottom = 651.0
+theme_override_font_sizes/font_size = 45
+text = "Opcaoq"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="opcao1" type="Button" parent="Panel/Opcao1"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = 44.0
+offset_right = 4.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "check"
+
+[node name="Opcao2" type="Label" parent="Panel"]
+layout_mode = 2
+offset_left = 400.0
+offset_top = 301.0
+offset_right = 800.0
+offset_bottom = 651.0
+theme_override_font_sizes/font_size = 45
+text = "Opcao2"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="opcao2" type="Button" parent="Panel/Opcao2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = 21.0
+offset_right = 43.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "check"
+
+[node name="Opcao3" type="Label" parent="Panel"]
+layout_mode = 2
+offset_left = 802.0
+offset_top = 301.0
+offset_right = 1202.0
+offset_bottom = 651.0
+theme_override_font_sizes/font_size = 45
+text = "Opcao2"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="opcao3" type="Button" parent="Panel/Opcao3"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = 21.0
+offset_right = 43.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "check"
+
+[node name="Opcao4" type="Label" parent="Panel"]
+layout_mode = 2
+offset_left = 1202.0
+offset_top = 301.0
+offset_right = 1602.0
+offset_bottom = 651.0
+theme_override_font_sizes/font_size = 45
+text = "Opcao2 opcao1 opcao3 opcao4 opcao5 opcao6 "
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="opcao4" type="Button" parent="Panel/Opcao4"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = 21.0
+offset_right = 43.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "check"
+
+[node name="TelaFinal" type="ScrollContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -222.0
+offset_top = -342.0
+offset_right = 223.0
+offset_bottom = 286.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="Panel/TelaFinal"]
+layout_mode = 2
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 50
+columns = 2
+
+[connection signal="pressed" from="Panel/voltar" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="Panel/Opcao1/opcao1" to="." method="_on_opcao_1_pressed"]
+[connection signal="pressed" from="Panel/Opcao2/opcao2" to="." method="_on_opcao_2_pressed"]
+[connection signal="pressed" from="Panel/Opcao3/opcao3" to="." method="_on_opcao_3_pressed"]
+[connection signal="pressed" from="Panel/Opcao4/opcao4" to="." method="_on_opcao_4_pressed"]

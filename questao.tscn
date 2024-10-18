@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://psgnj44dgw40"]
+
+[ext_resource type="Script" path="res://questao.gd" id="1_hr3v1"]
+
+[node name="Questao" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 22
+text = "QUESTAO 15"
+script = ExtResource("1_hr3v1")
+
+[node name="Cor" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 148.0
+offset_right = 188.0
+offset_bottom = 40.0
